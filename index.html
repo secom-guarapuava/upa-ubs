@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B3D91" />
+  <meta name="description" content="UBS ou UPA: saiba onde procurar atendimento em Guarapuava. Guia visual e em áudio da Prefeitura de Guarapuava." />
+  <meta property="og:title" content="UBS ou UPA — Onde procurar atendimento | Guarapuava" />
+  <meta property="og:description" content="Entenda em segundos qual unidade de saúde procurar." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+  <title>UBS ou UPA — Onde procurar atendimento | Guarapuava</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --azul: #0B3D91;
+      --azul-escuro: #082A66;
+      --azul-claro: #E6F0FB;
+      --azul-suave: #4A78C4;
+      --vermelho: #D7263D;
+      --vermelho-vivo: #E63946;
+      --vermelho-claro: #FDECEE;
+      --vermelho-fundo: #FFF1F3;
+      --verde: #1FA84C;
+      --verde-escuro: #15803D;
+      --verde-claro: #E8F7EB;
+      --verde-fundo: #F0FAF3;
+      --amarelo: #FFB400;
+      --cinza-texto: #1A1F2E;
+      --cinza-suave: #5C6470;
+      --cinza-linha: #E2E6EC;
+      --bg: #FFFFFF;
+      --bg-alt: #F6F8FB;
+      --radius: 16px;
+      --radius-lg: 22px;
+      --shadow-sm: 0 2px 6px rgba(11, 61, 145, 0.06);
+      --shadow: 0 8px 24px rgba(11, 61, 145, 0.10);
+      --shadow-lg: 0 18px 48px rgba(11, 61, 145, 0.14);
+      --max: 1180px;
+      --transition: 0.25s ease;
+    }
+
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--cinza-texto);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: var(--azul); text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .skip-link {
+      position: absolute; left: -9999px;
+    }
+    .skip-link:focus {
+      position: fixed; left: 16px; top: 16px;
+      padding: 10px 16px; background: var(--azul); color: #fff;
+      border-radius: 8px; z-index: 9999;
+    }
+
+    /* ====== FAIXA SAMU 192 (TOPO) ====== */
+    .samu-bar {
+      background: linear-gradient(90deg, #C0162B 0%, #E63946 100%);
+      color: #fff;
+      padding: 10px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .samu-bar::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0 12px, transparent 12px 24px);
+      pointer-events: none;
+    }
+    .samu-inner {
+      display: flex; align-items: center; justify-content: center;
+      gap: 12px; flex-wrap: wrap;
+      font-weight: 700; font-size: 15px;
+      position: relative;
+    }
+    .samu-inner .siren {
+      font-size: 22px;
+      animation: blink 1s infinite;
+      display: inline-block;
+    }
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0.35; }
+    }
+    .samu-inner a {
+      color: #fff;
+      background: rgba(255,255,255,0.18);
+      padding: 6px 14px; border-radius: 999px;
+      font-weight: 800; letter-spacing: 0.5px;
+      backdrop-filter: blur(6px);
+    }
+    .samu-inner a:hover { background: rgba(255,255,255,0.3); text-decoration: none; }
+
+    /* ====== TOPBAR ====== */
+    header.topbar {
+      position: sticky; top: 0;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: saturate(180%) blur(10px);
+      border-bottom: 1px solid var(--cinza-linha);
+      z-index: 100;
+    }
+    .topbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 0; gap: 12px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 800; color: var(--azul);
+      font-size: 16px;
+    }
+    .brand-dot {
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--azul);
+      box-shadow: 0 0 0 4px var(--azul-claro);
+      animation: pulse-soft 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse-soft {
+      0%, 100% { box-shadow: 0 0 0 4px var(--azul-claro); }
+      50% { box-shadow: 0 0 0 8px rgba(11,61,145,0.10); }
+    }
+
+    /* Audio button */
+    .audio-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 2px solid var(--azul);
+      background: #fff; color: var(--azul);
+      font-weight: 700; font-size: 14px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+    .audio-btn:hover, .audio-btn:focus {
+      background: var(--azul); color: #fff;
+    }
+    .audio-btn .speaker {
+      font-size: 18px;
+    }
+    .audio-btn.playing {
+      background: var(--azul); color: #fff;
+      animation: pulse-soft 1.2s ease-in-out infinite;
+    }
+    .audio-btn.playing .speaker::after {
+      content: " ⏸";
+    }
+
+    /* ====== HERO ====== */
+    .hero {
+      background:
+        radial-gradient(ellipse at top right, rgba(74,120,196,0.15), transparent 60%),
+        radial-gradient(ellipse at bottom left, rgba(31,168,76,0.10), transparent 55%),
+        linear-gradient(180deg, #F8FBFF 0%, #FFFFFF 100%);
+      padding: 56px 0 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #fff;
+      color: var(--azul);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 700; font-size: 13px;
+      letter-spacing: 0.4px; text-transform: uppercase;
+      margin-bottom: 22px;
+      border: 1px solid var(--azul-claro);
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-eyebrow .emj { font-size: 18px; }
+    .hero h1 {
+      font-size: clamp(2.1rem, 5vw, 3.4rem);
+      line-height: 1.08;
+      margin: 0 0 18px;
+      color: var(--azul-escuro);
+      font-weight: 900;
+      letter-spacing: -0.025em;
+    }
+    .hero h1 .ubs-word { color: var(--verde); }
+    .hero h1 .upa-word { color: var(--vermelho); }
+    .hero h1 .or-word { color: var(--azul-suave); font-weight: 700; font-size: 0.8em; padding: 0 6px; }
+    .hero p.lead {
+      font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+      color: var(--cinza-suave);
+      margin: 0 0 26px;
+      max-width: 560px;
+      font-weight: 500;
+    }
+    .hero-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      max-width: 560px;
+    }
+    .big-btn {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 8px;
+      padding: 22px 18px;
+      border-radius: 18px;
+      font-weight: 800; font-size: 17px;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+      color: #fff;
+      min-height: 130px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: none;
+      font-family: inherit;
+    }
+    .big-btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); text-decoration: none; }
+    .big-btn:active { transform: translateY(-1px); }
+    .big-btn .big-emoji {
+      font-size: 48px;
+      line-height: 1;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.18));
+    }
+    .big-btn small {
+      display: block;
+      font-weight: 500;
+      font-size: 13px;
+      opacity: 0.92;
+      margin-top: 2px;
+    }
+    .big-btn.ubs {
+      background: linear-gradient(135deg, #1FA84C 0%, #15803D 100%);
+    }
+    .big-btn.upa {
+      background: linear-gradient(135deg, #E63946 0%, #C0162B 100%);
+    }
+    .big-btn.upa::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.25), transparent 60%);
+      animation: flash 2.5s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes flash {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    /* Hero visual — caminhos */
+    .hero-visual {
+      position: relative;
+      display: flex; justify-content: center; align-items: center;
+    }
+    .paths-svg {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+    }
+    .paths-svg .float { animation: floaty 4s ease-in-out infinite; }
+    .paths-svg .float-2 { animation: floaty 5s ease-in-out infinite; animation-delay: -1.5s; }
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .paths-svg .pulse-red { animation: pulseRed 1.2s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+    @keyframes pulseRed {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.15); opacity: 0.8; }
+    }
+    .paths-svg .beat { animation: beat 1.1s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      14% { transform: scale(1.15); }
+      28% { transform: scale(1); }
+      42% { transform: scale(1.1); }
+      70% { transform: scale(1); }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .hero-visual { order: -1; }
+      .paths-svg { max-width: 340px; }
+      .hero { padding: 40px 0 48px; }
+    }
+
+    /* ====== SECTIONS ====== */
+    section { padding: 64px 0; }
+    section.alt { background: var(--bg-alt); }
+    .section-head {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 40px;
+    }
+    .section-head h2 {
+      font-size: clamp(1.8rem, 3.6vw, 2.5rem);
+      margin: 0 0 12px;
+      color: var(--azul-escuro);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+    .section-head p {
+      font-size: 1.08rem;
+      color: var(--cinza-suave);
+      margin: 0;
+    }
+    .section-head .emoji-title {
+      font-size: 44px;
+      display: inline-block;
+      margin-bottom: 6px;
+      animation: floaty 3s ease-in-out infinite;
+    }
+
+    /* ====== DECISOR INTERATIVO ====== */
+    .quiz-section {
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--azul-claro) 100%);
+      padding: 64px 0;
+    }
+    .quiz-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 36px 28px;
+      box-shadow: var(--shadow-lg);
+      border: 2px solid var(--azul-claro);
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .quiz-prompt {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+    .quiz-prompt h3 {
+      font-size: clamp(1.4rem, 2.4vw, 1.7rem);
+      margin: 0 0 8px;
+      color: var(--azul-escuro);
+      font-weight: 800;
+    }
+    .quiz-prompt p {
+      color: var(--cinza-suave);
+      margin: 0;
+      font-size: 15px;
+    }
+    .symptom-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 760px) {
+      .symptom-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .symptom-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .quiz-card { padding: 24px 18px; }
+    }
+    .symptom-btn {
+      background: var(--bg-alt);
+      border: 2px solid transparent;
+      border-radius: 16px;
+      padding: 18px 8px 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      font-family: inherit;
+      text-align: center;
+    }
+    .symptom-btn:hover, .symptom-btn:focus {
+      border-color: var(--azul);
+      background: #fff;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+    .symptom-btn:active { transform: translateY(-1px); }
+    .symptom-btn .s-emoji {
+      font-size: 40px;
+      line-height: 1;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+    }
+    .symptom-btn .s-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--cinza-texto);
+      line-height: 1.2;
+    }
+
+    /* Quiz result */
+    .quiz-result {
+      margin-top: 22px;
+      display: none;
+      padding: 28px 22px;
+      border-radius: 18px;
+      text-align: center;
+      animation: slideIn 0.4s ease;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .quiz-result.show { display: block; }
+    .quiz-result.ubs {
+      background: linear-gradient(135deg, var(--verde) 0%, var(--verde-escuro) 100%);
+      color: #fff;
+    }
+    .quiz-result.upa {
+      background: linear-gradient(135deg, var(--vermelho-vivo) 0%, #C0162B 100%);
+      color: #fff;
+      animation: slideIn 0.4s ease, pulseBg 2s ease-in-out infinite 0.4s;
+    }
+    @keyframes pulseBg {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(230,57,70,0.4); }
+      50% { box-shadow: 0 0 0 16px rgba(230,57,70,0); }
+    }
+    .quiz-result .r-emoji {
+      font-size: 64px;
+      display: block;
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+    .quiz-result .r-go {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      opacity: 0.95;
+      margin-bottom: 4px;
+    }
+    .quiz-result .r-where {
+      font-size: clamp(2.4rem, 6vw, 3.4rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin: 0;
+      line-height: 1;
+    }
+    .quiz-result .r-msg {
+      font-size: 15px;
+      margin: 12px auto 0;
+      max-width: 460px;
+      line-height: 1.5;
+    }
+
+    /* ====== COMPARAÇÃO BIG CARDS ====== */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+    @media (max-width: 760px) {
+      .compare-grid { grid-template-columns: 1fr; }
+    }
+    .big-card {
+      border-radius: 22px;
+      padding: 32px 28px 30px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none;
+    }
+    .big-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      text-decoration: none;
+    }
+    .big-card.ubs { background: linear-gradient(135deg, #1FA84C 0%, #15803D 100%); }
+    .big-card.upa { background: linear-gradient(135deg, #E63946 0%, #C0162B 100%); }
+    .big-card .blob {
+      position: absolute;
+      top: -50px; right: -50px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.10);
+    }
+    .big-card .blob.small {
+      top: auto; bottom: -40px; right: auto; left: -40px;
+      width: 120px; height: 120px;
+      background: rgba(255,255,255,0.07);
+    }
+    .big-card .card-emoji {
+      font-size: 64px;
+      line-height: 1;
+      filter: drop-shadow(0 6px 12px rgba(0,0,0,0.2));
+      margin-bottom: 14px;
+      position: relative;
+    }
+    .big-card.ubs .card-emoji { animation: floaty 4s ease-in-out infinite; }
+    .big-card.upa .card-emoji { animation: beat 1.4s ease-in-out infinite; }
+    .big-card .tag {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .big-card h3 {
+      font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+      margin: 0 0 12px;
+      font-weight: 900;
+      letter-spacing: -0.015em;
+      position: relative;
+    }
+    .big-card p {
+      margin: 0;
+      font-size: 15.5px;
+      line-height: 1.5;
+      opacity: 0.97;
+      position: relative;
+    }
+
+    /* ====== SITUAÇÕES (UBS / UPA) ====== */
+    .ubs-section {
+      background: linear-gradient(180deg, var(--verde-fundo) 0%, #FFFFFF 100%);
+    }
+    .upa-section {
+      background: linear-gradient(180deg, var(--vermelho-fundo) 0%, #FFFFFF 100%);
+    }
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 900px) {
+      .items-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .items-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    }
+    .vitem {
+      background: #fff;
+      border-radius: 18px;
+      padding: 18px 14px 16px;
+      text-align: center;
+      border: 2px solid var(--cinza-linha);
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .vitem:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+    .ubs-section .vitem { border-color: var(--verde-claro); }
+    .upa-section .vitem { border-color: var(--vermelho-claro); }
+    .ubs-section .vitem:hover { border-color: var(--verde); }
+    .upa-section .vitem:hover { border-color: var(--vermelho-vivo); }
+    .vitem .v-emoji {
+      font-size: 44px;
+      line-height: 1;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 3px 6px rgba(0,0,0,0.10));
+    }
+    .upa-section .vitem .v-emoji { animation: subtleBeat 2s ease-in-out infinite; }
+    @keyframes subtleBeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+    }
+    .vitem .v-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--cinza-texto);
+      line-height: 1.3;
+    }
+    .vitem .v-sub {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--cinza-suave);
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+
+    /* ====== CALLOUTS ====== */
+    .callout {
+      border-radius: 16px;
+      padding: 22px 26px;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      font-size: 16px;
+      line-height: 1.5;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .callout.ubs {
+      background: var(--verde-claro);
+      border-left: 6px solid var(--verde);
+      color: #14532D;
+    }
+    .callout.upa {
+      background: var(--vermelho-claro);
+      border-left: 6px solid var(--vermelho);
+      color: #7F1D1D;
+    }
+    .callout strong { display: block; margin-bottom: 4px; font-size: 17px; font-weight: 800; }
+    .callout .c-emoji {
+      font-size: 44px;
+      flex: none;
+      line-height: 1;
+    }
+    .callout.upa .c-emoji { animation: shake 1.6s ease-in-out infinite; }
+    @keyframes shake {
+      0%, 100% { transform: rotate(0); }
+      25% { transform: rotate(-6deg); }
+      75% { transform: rotate(6deg); }
+    }
+    @media (max-width: 600px) {
+      .callout { padding: 18px; }
+      .callout .c-emoji { font-size: 36px; }
+    }
+
+    /* ====== ALERTA BANNER ====== */
+    .alert-banner {
+      background: #FFF7ED;
+      border-top: 1px solid var(--cinza-linha);
+      border-bottom: 1px solid var(--cinza-linha);
+      padding: 26px 0;
+    }
+    .alert-inner {
+      display: flex; gap: 18px; align-items: center;
+      max-width: 920px; margin: 0 auto;
+    }
+    .alert-inner .ico-circ {
+      flex: none; width: 56px; height: 56px;
+      background: var(--amarelo);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 30px;
+    }
+    .alert-inner p {
+      margin: 0; font-size: 16px; color: #6B4500;
+    }
+    .alert-inner strong { color: #92400E; }
+    @media (max-width: 600px) {
+      .alert-inner { flex-direction: column; text-align: center; }
+    }
+
+    /* ====== LINKS INSTITUCIONAIS ====== */
+    .links-section { background: var(--azul-claro); padding: 56px 0; }
+    .links-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    @media (max-width: 600px) { .links-grid { grid-template-columns: 1fr; } }
+    .link-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border: 2px solid transparent;
+      transition: var(--transition);
+      text-decoration: none;
+      color: var(--cinza-texto);
+      box-shadow: var(--shadow-sm);
+    }
+    .link-card:hover {
+      border-color: var(--azul);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+    }
+    .link-card .l-emoji {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: var(--azul-claro);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px; flex: none;
+    }
+    .link-card .l-text strong { display: block; font-size: 16px; color: var(--azul-escuro); margin-bottom: 2px; }
+    .link-card .l-text span { font-size: 13px; color: var(--cinza-suave); word-break: break-all; }
+
+    /* ====== FLOATING SHARE WHATSAPP ====== */
+    .fab-share {
+      position: fixed;
+      bottom: 22px; right: 22px;
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 10px 28px rgba(37,211,102,0.42);
+      cursor: pointer;
+      z-index: 90;
+      border: none;
+      font-size: 30px;
+      transition: transform 0.25s ease;
+    }
+    .fab-share:hover { transform: scale(1.08); }
+    .fab-share::after {
+      content: "Compartilhar";
+      position: absolute;
+      right: 70px;
+      background: var(--cinza-texto);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px; font-weight: 600;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+    .fab-share:hover::after { opacity: 1; }
+    @media (max-width: 600px) {
+      .fab-share { bottom: 16px; right: 16px; width: 54px; height: 54px; font-size: 26px; }
+      .fab-share::after { display: none; }
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      background: var(--azul-escuro);
+      color: #DAE3F2;
+      padding: 44px 0 26px;
+      font-size: 14px;
+    }
+    footer .container { text-align: center; }
+    footer p { margin: 0 0 10px; line-height: 1.6; }
+    footer p.small { font-size: 12.5px; color: #AAB7CE; }
+    footer hr {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      margin: 22px auto; max-width: 540px;
+    }
+    footer .credits strong { color: #fff; }
+
+    /* Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Stagger children */
+    .stagger > * { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .stagger.visible > * { opacity: 1; transform: translateY(0); }
+    .stagger.visible > *:nth-child(1) { transition-delay: 0.04s; }
+    .stagger.visible > *:nth-child(2) { transition-delay: 0.08s; }
+    .stagger.visible > *:nth-child(3) { transition-delay: 0.12s; }
+    .stagger.visible > *:nth-child(4) { transition-delay: 0.16s; }
+    .stagger.visible > *:nth-child(5) { transition-delay: 0.20s; }
+    .stagger.visible > *:nth-child(6) { transition-delay: 0.24s; }
+    .stagger.visible > *:nth-child(7) { transition-delay: 0.28s; }
+    .stagger.visible > *:nth-child(8) { transition-delay: 0.32s; }
+    .stagger.visible > *:nth-child(9) { transition-delay: 0.36s; }
+    .stagger.visible > *:nth-child(10) { transition-delay: 0.40s; }
+    .stagger.visible > *:nth-child(n+11) { transition-delay: 0.44s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal, .stagger > * { opacity: 1; transform: none; }
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--azul-suave);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- FAIXA SAMU -->
+  <div class="samu-bar" role="region" aria-label="Emergência">
+    <div class="container samu-inner">
+      <span class="siren" aria-hidden="true">🚨</span>
+      <span>EMERGÊNCIA COM RISCO DE VIDA? Ligue agora:</span>
+      <a href="tel:192" aria-label="Ligar para o SAMU 192">SAMU 192</a>
+    </div>
+  </div>
+
+  <!-- TOPBAR -->
+  <header class="topbar" role="banner">
+    <div class="container topbar-inner">
+      <div class="brand" aria-label="UBS ou UPA — Guia informativo">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Saúde Guarapuava</span>
+      </div>
+      <button class="audio-btn" id="audioBtn" aria-label="Ouvir esta página em voz alta" aria-pressed="false">
+        <span class="speaker" aria-hidden="true">🔊</span>
+        <span class="audio-label">Ouvir</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- HERO -->
+    <section class="hero" id="topo">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <span class="hero-eyebrow"><span class="emj" aria-hidden="true">💙</span> Saúde pública de Guarapuava</span>
+          <h1>
+            <span class="ubs-word">UBS</span>
+            <span class="or-word">ou</span>
+            <span class="upa-word">UPA</span>?
+            <br/>Saiba onde ir.
+          </h1>
+          <p class="lead">Toque, escute e descubra em segundos a unidade certa para você.</p>
+
+          <div class="hero-actions">
+            <a href="#ubs" class="big-btn ubs" data-narrate="UBS, prevenção e rotina. Toque para ver quando procurar.">
+              <span class="big-emoji" aria-hidden="true">🩺</span>
+              <span>UBS</span>
+              <small>Rotina &amp; Prevenção</small>
+            </a>
+            <a href="#upa" class="big-btn upa" data-narrate="UPA, urgência. Toque para ver quando procurar.">
+              <span class="big-emoji" aria-hidden="true">🚑</span>
+              <span>UPA</span>
+              <small>Urgência</small>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <!-- Ilustração dos dois caminhos -->
+          <svg class="paths-svg" viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background soft -->
+            <defs>
+              <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#E6F0FB"/>
+                <stop offset="1" stop-color="#FFFFFF"/>
+              </linearGradient>
+              <linearGradient id="ubsG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#1FA84C"/>
+                <stop offset="1" stop-color="#15803D"/>
+              </linearGradient>
+              <linearGradient id="upaG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#E63946"/>
+                <stop offset="1" stop-color="#C0162B"/>
+              </linearGradient>
+              <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="6"/>
+              </filter>
+            </defs>
+
+            <!-- Sol/Bg circle -->
+            <circle cx="240" cy="80" r="56" fill="#FFF4D6" opacity="0.7"/>
+
+            <!-- Path UBS (left, green) -->
+            <path d="M40 380 Q 100 280 80 200 Q 60 130 130 90" stroke="#1FA84C" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 10" fill="none" opacity="0.55"/>
+            <!-- Path UPA (right, red) -->
+            <path d="M440 380 Q 380 280 400 200 Q 420 130 350 90" stroke="#E63946" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 10" fill="none" opacity="0.55"/>
+
+            <!-- UBS building (left) -->
+            <g class="float">
+              <rect x="60" y="100" width="120" height="110" rx="10" fill="url(#ubsG)"/>
+              <rect x="80" y="130" width="22" height="28" rx="3" fill="#fff" opacity="0.85"/>
+              <rect x="110" y="130" width="22" height="28" rx="3" fill="#fff" opacity="0.85"/>
+              <rect x="140" y="130" width="22" height="28" rx="3" fill="#fff" opacity="0.85"/>
+              <rect x="100" y="170" width="40" height="40" rx="4" fill="#15803D"/>
+              <!-- Cross -->
+              <rect x="115" y="180" width="10" height="20" fill="#fff"/>
+              <rect x="110" y="185" width="20" height="10" fill="#fff"/>
+              <!-- Roof -->
+              <polygon points="50,100 190,100 120,60" fill="#15803D"/>
+              <!-- Sign -->
+              <rect x="80" y="78" width="80" height="18" rx="4" fill="#fff"/>
+              <text x="120" y="92" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="800" fill="#1FA84C">UBS</text>
+            </g>
+
+            <!-- UPA building (right) -->
+            <g class="float-2">
+              <rect x="300" y="100" width="120" height="110" rx="10" fill="url(#upaG)"/>
+              <rect x="318" y="130" width="22" height="28" rx="3" fill="#fff" opacity="0.85"/>
+              <rect x="348" y="130" width="22" height="28" rx="3" fill="#fff" opacity="0.85"/>
+              <rect x="378" y="130" width="22" height="28" rx="3" fill="#fff" opacity="0.85"/>
+              <rect x="340" y="170" width="40" height="40" rx="4" fill="#C0162B"/>
+              <!-- Cross -->
+              <rect x="355" y="180" width="10" height="20" fill="#fff"/>
+              <rect x="350" y="185" width="20" height="10" fill="#fff"/>
+              <!-- Roof -->
+              <polygon points="290,100 430,100 360,60" fill="#C0162B"/>
+              <!-- Sign -->
+              <rect x="320" y="78" width="80" height="18" rx="4" fill="#fff"/>
+              <text x="360" y="92" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="800" fill="#E63946">UPA 24h</text>
+              <!-- Pulse light on top -->
+              <circle class="pulse-red" cx="360" cy="55" r="6" fill="#FFD60A"/>
+            </g>
+
+            <!-- Person in middle -->
+            <g transform="translate(220,250)">
+              <circle cx="20" cy="18" r="16" fill="#FBD9A0"/>
+              <rect x="6" y="36" width="28" height="38" rx="10" fill="#0B3D91"/>
+              <rect x="10" y="74" width="8" height="22" rx="3" fill="#082A66"/>
+              <rect x="22" y="74" width="8" height="22" rx="3" fill="#082A66"/>
+              <!-- Arms -->
+              <rect x="-4" y="40" width="10" height="28" rx="5" fill="#0B3D91" transform="rotate(-20 1 54)"/>
+              <rect x="34" y="40" width="10" height="28" rx="5" fill="#0B3D91" transform="rotate(20 39 54)"/>
+              <!-- Hair -->
+              <path d="M4 12 Q 20 -4 36 12 L 36 18 L 4 18 Z" fill="#5C3A1E"/>
+            </g>
+
+            <!-- Question mark above person -->
+            <g transform="translate(252,212)">
+              <circle cx="0" cy="0" r="16" fill="#0B3D91"/>
+              <text x="0" y="6" text-anchor="middle" font-family="Inter, sans-serif" font-size="22" font-weight="900" fill="#fff">?</text>
+            </g>
+
+            <!-- Heart with pulse (decorative) -->
+            <g transform="translate(60,310)" class="beat">
+              <path d="M12 21s-7-4.5-7-10a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-7 10-7 10z" fill="#E63946" transform="scale(1.2)"/>
+            </g>
+            <!-- Plus sign -->
+            <g transform="translate(380,310)">
+              <rect x="-3" y="-12" width="6" height="24" rx="2" fill="#1FA84C"/>
+              <rect x="-12" y="-3" width="24" height="6" rx="2" fill="#1FA84C"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- DECISOR INTERATIVO -->
+    <section class="quiz-section" id="decisor">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="emoji-title" aria-hidden="true">👇</span>
+          <h2>Toque no que você está sentindo</h2>
+          <p>A página vai te mostrar onde procurar atendimento.</p>
+        </div>
+
+        <div class="quiz-card reveal">
+          <div class="symptom-grid stagger" role="group" aria-label="Sintomas">
+            <button class="symptom-btn" data-go="upa" data-symptom="dor no peito">
+              <span class="s-emoji" aria-hidden="true">❤️‍🩹</span>
+              <span class="s-label">Dor no peito</span>
+            </button>
+            <button class="symptom-btn" data-go="upa" data-symptom="falta de ar">
+              <span class="s-emoji" aria-hidden="true">😮‍💨</span>
+              <span class="s-label">Falta de ar</span>
+            </button>
+            <button class="symptom-btn" data-go="upa" data-symptom="sangramento">
+              <span class="s-emoji" aria-hidden="true">🩸</span>
+              <span class="s-label">Sangramento</span>
+            </button>
+            <button class="symptom-btn" data-go="upa" data-symptom="febre alta">
+              <span class="s-emoji" aria-hidden="true">🥵</span>
+              <span class="s-label">Febre alta</span>
+            </button>
+            <button class="symptom-btn" data-go="upa" data-symptom="desmaio">
+              <span class="s-emoji" aria-hidden="true">😵</span>
+              <span class="s-label">Desmaio</span>
+            </button>
+            <button class="symptom-btn" data-go="upa" data-symptom="queimadura">
+              <span class="s-emoji" aria-hidden="true">🔥</span>
+              <span class="s-label">Queimadura</span>
+            </button>
+            <button class="symptom-btn" data-go="upa" data-symptom="acidente">
+              <span class="s-emoji" aria-hidden="true">🚗</span>
+              <span class="s-label">Acidente</span>
+            </button>
+            <button class="symptom-btn" data-go="upa" data-symptom="convulsão">
+              <span class="s-emoji" aria-hidden="true">⚡</span>
+              <span class="s-label">Convulsão</span>
+            </button>
+
+            <button class="symptom-btn" data-go="ubs" data-symptom="vacina">
+              <span class="s-emoji" aria-hidden="true">💉</span>
+              <span class="s-label">Vacina</span>
+            </button>
+            <button class="symptom-btn" data-go="ubs" data-symptom="receita">
+              <span class="s-emoji" aria-hidden="true">📋</span>
+              <span class="s-label">Receita</span>
+            </button>
+            <button class="symptom-btn" data-go="ubs" data-symptom="gripe">
+              <span class="s-emoji" aria-hidden="true">🤧</span>
+              <span class="s-label">Gripe leve</span>
+            </button>
+            <button class="symptom-btn" data-go="ubs" data-symptom="pré-natal">
+              <span class="s-emoji" aria-hidden="true">🤰</span>
+              <span class="s-label">Pré-natal</span>
+            </button>
+            <button class="symptom-btn" data-go="ubs" data-symptom="curativo">
+              <span class="s-emoji" aria-hidden="true">🩹</span>
+              <span class="s-label">Curativo</span>
+            </button>
+            <button class="symptom-btn" data-go="ubs" data-symptom="pressão">
+              <span class="s-emoji" aria-hidden="true">🩺</span>
+              <span class="s-label">Aferir pressão</span>
+            </button>
+            <button class="symptom-btn" data-go="ubs" data-symptom="dor de cabeça">
+              <span class="s-emoji" aria-hidden="true">🤕</span>
+              <span class="s-label">Dor de cabeça</span>
+            </button>
+            <button class="symptom-btn" data-go="ubs" data-symptom="consulta de rotina">
+              <span class="s-emoji" aria-hidden="true">👨‍⚕️</span>
+              <span class="s-label">Consulta</span>
+            </button>
+          </div>
+
+          <div class="quiz-result" id="quizResult" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARAÇÃO -->
+    <section id="diferenca">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="emoji-title" aria-hidden="true">🤔</span>
+          <h2>Qual é a diferença?</h2>
+          <p>São duas unidades do SUS. Cada uma serve para um momento.</p>
+        </div>
+
+        <div class="compare-grid">
+          <a href="#ubs" class="big-card ubs reveal" aria-labelledby="ubs-title">
+            <span class="blob" aria-hidden="true"></span>
+            <span class="blob small" aria-hidden="true"></span>
+            <div class="card-emoji" aria-hidden="true">🩺</div>
+            <span class="tag">UBS</span>
+            <h3 id="ubs-title">Prevenção e Rotina</h3>
+            <p>É a porta de entrada do SUS. Use para cuidado preventivo, vacina, receita e acompanhamento — quando você <strong>não precisa de pressa</strong>.</p>
+          </a>
+
+          <a href="#upa" class="big-card upa reveal" aria-labelledby="upa-title">
+            <span class="blob" aria-hidden="true"></span>
+            <span class="blob small" aria-hidden="true"></span>
+            <div class="card-emoji" aria-hidden="true">🚑</div>
+            <span class="tag">UPA 24H</span>
+            <h3 id="upa-title">Pronto Atendimento</h3>
+            <p>Atende problemas <strong>agudos e urgentes</strong> — quando o sintoma é forte, surgiu de repente ou pode piorar rápido.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- UBS -->
+    <section id="ubs" class="ubs-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="emoji-title" aria-hidden="true">🩺</span>
+          <h2>Quando ir na UBS</h2>
+          <p>Cuidados de rotina, prevenção e sintomas leves.</p>
+        </div>
+
+        <div class="items-grid stagger">
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">👨‍⚕️</div>
+            <div class="v-label">Consulta de rotina</div>
+            <span class="v-sub">acompanhamento médico</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">💉</div>
+            <div class="v-label">Vacina</div>
+            <span class="v-sub">adulto e criança</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🤰</div>
+            <div class="v-label">Pré-natal</div>
+            <span class="v-sub">acompanhamento</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">📋</div>
+            <div class="v-label">Receita</div>
+            <span class="v-sub">troca ou renovação</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">💊</div>
+            <div class="v-label">Doença crônica</div>
+            <span class="v-sub">diabetes, hipertensão</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🩹</div>
+            <div class="v-label">Curativo</div>
+            <span class="v-sub">inalação, retirada de pontos</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🤧</div>
+            <div class="v-label">Sintomas leves</div>
+            <span class="v-sub">gripe, dor de ouvido</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">😶‍🌫️</div>
+            <div class="v-label">Mal-estar leve</div>
+            <span class="v-sub">tontura, indisposição</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🧴</div>
+            <div class="v-label">Sondas e cateteres</div>
+            <span class="v-sub">troca</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">💧</div>
+            <div class="v-label">Medicação contínua</div>
+            <span class="v-sub">aplicação</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🔬</div>
+            <div class="v-label">Exames e especialistas</div>
+            <span class="v-sub">encaminhamento</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🤕</div>
+            <div class="v-label">Dor leve</div>
+            <span class="v-sub">cabeça ou coluna</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🩺</div>
+            <div class="v-label">Aferir pressão</div>
+            <span class="v-sub">verificação</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🦟</div>
+            <div class="v-label">Suspeita de dengue</div>
+            <span class="v-sub">ou Covid-19</span>
+          </div>
+        </div>
+
+        <div class="callout ubs reveal" role="note">
+          <span class="c-emoji" aria-hidden="true">💚</span>
+          <div>
+            <strong>Cuide antes de virar urgência.</strong>
+            A UBS é o melhor lugar para acompanhar a sua saúde e prevenir problemas.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPA -->
+    <section id="upa" class="upa-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="emoji-title" aria-hidden="true">🚑</span>
+          <h2>Quando ir na UPA</h2>
+          <p>Sintomas fortes, urgência ou problema que pode piorar rápido.</p>
+        </div>
+
+        <div class="items-grid stagger">
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🥵</div>
+            <div class="v-label">Febre alta</div>
+            <span class="v-sub">que não passa</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">❤️‍🩹</div>
+            <div class="v-label">Dor no peito</div>
+            <span class="v-sub">forte ou abdômen</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">😮‍💨</div>
+            <div class="v-label">Falta de ar</div>
+            <span class="v-sub">crise de asma</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🩸</div>
+            <div class="v-label">Sangramento</div>
+            <span class="v-sub">corte, hemorragia</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🦴</div>
+            <div class="v-label">Queda ou fratura</div>
+            <span class="v-sub">leve</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">📈</div>
+            <div class="v-label">Pressão muito alta</div>
+            <span class="v-sub">descontrolada</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">😵</div>
+            <div class="v-label">Desmaio</div>
+            <span class="v-sub">perda de consciência</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">😖</div>
+            <div class="v-label">Cólica intensa</div>
+            <span class="v-sub">renal ou abdominal</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">⚡</div>
+            <div class="v-label">Convulsão</div>
+            <span class="v-sub">crise</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">💔</div>
+            <div class="v-label">Sintomas de infarto</div>
+            <span class="v-sub">dor irradiada</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🤯</div>
+            <div class="v-label">Sintomas de AVC</div>
+            <span class="v-sub">boca torta, fraqueza</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🤧</div>
+            <div class="v-label">Alergia súbita</div>
+            <span class="v-sub">inchaço, falta de ar</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🐕</div>
+            <div class="v-label">Mordida de animal</div>
+            <span class="v-sub">cão, gato, outros</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🚗</div>
+            <div class="v-label">Acidente</div>
+            <span class="v-sub">automobilístico</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🔥</div>
+            <div class="v-label">Queimadura</div>
+            <span class="v-sub">qualquer grau</span>
+          </div>
+          <div class="vitem">
+            <div class="v-emoji" aria-hidden="true">🩸</div>
+            <div class="v-label">Hemorragia</div>
+            <span class="v-sub">sangramento intenso</span>
+          </div>
+        </div>
+
+        <div class="callout upa reveal" role="alert">
+          <span class="c-emoji" aria-hidden="true">⚠️</span>
+          <div>
+            <strong>Em caso de sintomas graves, vá imediatamente.</strong>
+            Cada minuto faz diferença. Se houver risco de vida, ligue <strong>SAMU 192</strong>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALERTA RESPONSÁVEL -->
+    <div class="alert-banner" role="region" aria-label="Alerta">
+      <div class="container alert-inner">
+        <div class="ico-circ" aria-hidden="true">ℹ️</div>
+        <p>
+          <strong>Esta página é informativa.</strong>
+          Em caso de sintomas graves, piora rápida ou risco à vida, procure atendimento de urgência ou ligue para o SAMU 192.
+        </p>
+      </div>
+    </div>
+
+    <!-- LINKS INSTITUCIONAIS -->
+    <section class="links-section" aria-label="Links institucionais">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Saiba mais</h2>
+          <p>Canais oficiais da Prefeitura de Guarapuava.</p>
+        </div>
+        <div class="links-grid">
+          <a href="https://www.instagram.com/guarapuava_pref/" target="_blank" rel="noopener noreferrer" class="link-card reveal">
+            <div class="l-emoji" aria-hidden="true">📷</div>
+            <div class="l-text">
+              <strong>Instagram da Prefeitura</strong>
+              <span>@guarapuava_pref</span>
+            </div>
+          </a>
+          <a href="https://guarapuava.pr.gov.br/" target="_blank" rel="noopener noreferrer" class="link-card reveal">
+            <div class="l-emoji" aria-hidden="true">🌐</div>
+            <div class="l-text">
+              <strong>Site oficial</strong>
+              <span>guarapuava.pr.gov.br</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p>Conteúdo baseado em informações oficiais da saúde pública municipal.</p>
+      <p class="small">Esta página é informativa e não substitui a avaliação de um profissional de saúde.</p>
+      <hr/>
+      <div class="credits">
+        <p class="small">© 2026 <strong>Prefeitura de Guarapuava</strong> — Página informativa desenvolvida por <strong>Bruno Trevisan</strong> · Diretor de Comunicação, sob supervisão do Secretário de Comunicação <strong>Rafael Markus</strong>.</p>
+        <p class="small">Identidade visual: <strong>Maryanna Dulnik</strong> · Designer Gráfico.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP SHARE FAB -->
+  <button class="fab-share" id="shareBtn" aria-label="Compartilhar no WhatsApp">
+    <span aria-hidden="true">💬</span>
+  </button>
+
+  <script>
+    // ====== REVEAL ON SCROLL ======
+    (function() {
+      const targets = document.querySelectorAll('.reveal, .stagger');
+      if (!('IntersectionObserver' in window)) {
+        targets.forEach(el => el.classList.add('visible'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      targets.forEach(el => io.observe(el));
+    })();
+
+    // ====== DECISOR INTERATIVO ======
+    (function() {
+      const buttons = document.querySelectorAll('.symptom-btn');
+      const result = document.getElementById('quizResult');
+
+      const messages = {
+        ubs: {
+          emoji: '🩺',
+          go: 'Procure a',
+          where: 'UBS',
+          msg: 'Para isso, vá até a Unidade Básica de Saúde mais próxima. É o melhor lugar para esse tipo de cuidado.'
+        },
+        upa: {
+          emoji: '🚑',
+          go: 'Procure a',
+          where: 'UPA',
+          msg: 'Vá até a UPA 24h o quanto antes. Se houver risco imediato à vida, ligue para o SAMU 192.'
+        }
+      };
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const go = btn.dataset.go;
+          const symptom = btn.dataset.symptom;
+          const m = messages[go];
+
+          result.className = 'quiz-result show ' + go;
+          result.innerHTML = `
+            <span class="r-emoji" aria-hidden="true">${m.emoji}</span>
+            <div class="r-go">${m.go}</div>
+            <div class="r-where">${m.where}</div>
+            <p class="r-msg">Para <strong>${symptom}</strong>: ${m.msg}</p>
+          `;
+
+          // Speak the result aloud
+          speak(`Para ${symptom}, procure a ${m.where}. ${m.msg}`);
+
+          // Scroll result into view smoothly
+          setTimeout(() => {
+            result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 80);
+        });
+      });
+    })();
+
+    // ====== ÁUDIO (Text-to-Speech) ======
+    let synth = window.speechSynthesis;
+    let isPlaying = false;
+    let currentUtter = null;
+
+    function speak(text) {
+      if (!synth) return;
+      synth.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'pt-BR';
+      u.rate = 0.95;
+      u.pitch = 1;
+      synth.speak(u);
+    }
+
+    function getPageText() {
+      // Build a clear narration script from the page content
+      return [
+        'UBS ou UPA: saiba onde ir.',
+        'Em emergência com risco de vida, ligue 192 para o SAMU.',
+        'A UBS é a Unidade Básica de Saúde. Procure para prevenção, vacina, receita, pré-natal, consulta de rotina, e sintomas leves como gripe ou dor de cabeça leve.',
+        'A UPA é a Unidade de Pronto Atendimento. Procure em casos de dor forte no peito, falta de ar, sangramento, febre alta que não passa, desmaio, convulsão, queimadura, acidente, sintomas de infarto ou de AVC.',
+        'Se ficar em dúvida, role a página até a seção Toque no que você está sentindo e selecione o seu sintoma. A página vai te dizer onde procurar atendimento.',
+        'Esta página é informativa e não substitui a avaliação de um profissional de saúde.'
+      ].join(' ');
+    }
+
+    const audioBtn = document.getElementById('audioBtn');
+    const audioLabel = audioBtn.querySelector('.audio-label');
+
+    audioBtn.addEventListener('click', () => {
+      if (!synth) {
+        alert('Seu navegador não suporta leitura em voz alta.');
+        return;
+      }
+      if (isPlaying) {
+        synth.cancel();
+        isPlaying = false;
+        audioBtn.classList.remove('playing');
+        audioBtn.setAttribute('aria-pressed', 'false');
+        audioLabel.textContent = 'Ouvir';
+        return;
+      }
+      const u = new SpeechSynthesisUtterance(getPageText());
+      u.lang = 'pt-BR';
+      u.rate = 0.95;
+      u.pitch = 1;
+      u.onend = () => {
+        isPlaying = false;
+        audioBtn.classList.remove('playing');
+        audioBtn.setAttribute('aria-pressed', 'false');
+        audioLabel.textContent = 'Ouvir';
+      };
+      u.onerror = u.onend;
+      currentUtter = u;
+      synth.speak(u);
+      isPlaying = true;
+      audioBtn.classList.add('playing');
+      audioBtn.setAttribute('aria-pressed', 'true');
+      audioLabel.textContent = 'Pausar';
+    });
+
+    // Cancel speech when navigating away
+    window.addEventListener('beforeunload', () => { if (synth) synth.cancel(); });
+
+    // ====== WHATSAPP SHARE ======
+    document.getElementById('shareBtn').addEventListener('click', () => {
+      const msg = encodeURIComponent('Confira: UBS ou UPA? Saiba onde procurar atendimento em Guarapuava — ' + window.location.href);
+      const url = 'https://wa.me/?text=' + msg;
+      // try native share first
+      if (navigator.share) {
+        navigator.share({
+          title: 'UBS ou UPA — Guarapuava',
+          text: 'Saiba onde procurar atendimento em Guarapuava.',
+          url: window.location.href
+        }).catch(() => window.open(url, '_blank'));
+      } else {
+        window.open(url, '_blank');
+      }
+    });
+  </script>
+</body>
+</html>
